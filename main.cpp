@@ -29,13 +29,35 @@ Product* chooseProduct(){
     cout<<"Product not found"<<endl;
     return NULL;
 };
+
+bool checkout(Cart &cart){
+    if(cart.isEmpty())
+    {
+        return false;
+    }
+    int total=cart.getTotal();
+    cout<<"Total: "<<total<<endl;
+    cout<<"Pay in Cash: ";
+    int paid;
+    cin>>paid;
+    if(paid>=total)
+    {
+        cout<<"Change received: "<<(paid-total)<<endl;
+    }
+    else if(paid<total){
+    cout<<"Paid Successful: "<<paid<<endl;
+    cout<<"Please clear your due :"<<(total-paid)<<endl;    
+    }
+    cout<<"Thank you for shopping with us!"<<endl;
+    return true;
+};
 int main()
 {
     char action;
     Cart cart;
     while(true)
     {
-         cout<<"Select an action - (a)dd item , (v)iew cart, (c)heckout "<<"\n";
+         cout<<"Select an action - (a)dd item , (r)emove item, (d)elete all item in cart, (v)iew cart, (c)heckout "<<"\n";
         cin >> action;
         if(action == 'a')
         {
@@ -54,7 +76,11 @@ int main()
         }
         else if(action == 'c')
         {
+            cart.viewCart();
+           if(checkout(cart))
+           {
             break;
+           }
         }
     }
    

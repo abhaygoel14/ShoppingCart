@@ -73,7 +73,7 @@ class Cart{
         for(auto itemPair : items)
         {
             auto item=itemPair.second;
-            total+=item.product.price;
+            total+=(item.product.price*item.quantity);
         }
         return total;
     }
@@ -91,5 +91,9 @@ class Cart{
         }
 
         return itemList+"\nTotal Amount : Rs. "+to_string(cart_total)+"\n";
+    }
+
+    bool isEmpty(){
+        return items.empty();
     }
 };
