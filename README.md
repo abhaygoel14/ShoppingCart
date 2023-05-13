@@ -32,7 +32,7 @@ Open the Test Explorer window from the Test menu.
 
 Click "Run All" to run all the tests.
 
-![ezgif com-video-to-gif](https://github.com/abhaygoel14/ShoppingCart/assets/78078088/d6ee5dda-a586-4681-be14-6cdd72e847e7)
+![ezgif com-video-to-gif](https://github.com/abhaygoel14/ShoppingCart/assets/78078088/fccdaf67-850a-4bfb-b082-e6e6d29e65dc)
 
 
 If you encounter any issues during the installation or running of the ShoppingCart backend, please don't hesitate to reach out for assistance and email me abhay.goel14@gmail.com
